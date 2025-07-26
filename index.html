@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SKDT Physics Wallah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>SKDT Physics Wallah</h1>
+  <nav>
+    <a onclick="navigateTo('home')">Home</a>
+    <a onclick="navigateTo('courses')">Courses</a>
+    <a onclick="navigateTo('videos')">Videos</a>
+    <a onclick="navigateTo('contact')">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="page">
+    <h2>Welcome</h2>
+    <p>Free quality education for JEE & NDA aspirants.</p>
+  </section>
+
+  <section id="courses" class="page" style="display:none;">
+    <h2>Courses</h2>
+    <div id="course-list">Loading courses...</div>
+  </section>
+
+  <section id="videos" class="page" style="display:none;">
+    <h2>Video Lectures</h2>
+    <div class="video-grid" id="video-section">
+      <!-- YouTube videos will load here -->
+    </div>
+  </section>
+
+  <section id="contact" class="page" style="display:none;">
+    <h2>Contact Us</h2>
+    <form onsubmit="return validateContactForm();">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="contact-result"></p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 SKDT Physics Wallah. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

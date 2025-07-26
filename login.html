@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - SKDT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h2>Login</h2>
+    <form onsubmit="return handleLogin();">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p id="login-status"></p>
+  </main>
+
+  <script>
+    function handleLogin() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      if (user === "skdt" && pass === "1234") {
+        document.getElementById('login-status').innerText = "✅ Login successful!";
+        return false;
+      } else {
+        document.getElementById('login-status').innerText = "❌ Incorrect credentials.";
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
